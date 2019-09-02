@@ -1,14 +1,66 @@
-p{
+
+html{
+  font-family: 'Nunito', sans-serif;
 }
-.red{
-  height: 200px;
-  width:100px;
-  background-color: red;
+a{
+  text-decoration: none;/*la linea de los links donde debe estar*/
+  color: #FF0900;
 }
-#boton-pago{
-  background-color: yellow;
+.title{
+  text-transform: uppercase;
 }
-td{
-  border:solid 1px;
+.paragraph{
+  line-height: 1.8em;
+  font-weight: 300;
 }
-/*asi se coment en css*/
+.table{
+  width: 100%;
+  border-spacing: 0;
+}
+.table td, .table th{
+  padding: 1em;
+  text-align: left;
+}
+
+.table tr:nth-child(even){
+    background: #85ACCC;
+
+}
+.fa-star, .fa-star-o{
+  color: #ffc400;
+}
+
+.container{
+  background: #fc4a1a;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #f7b733, #fc4a1a);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh; /*ocupe todo el largo y ancho de pantalla el degradados,
+  el "vh" representa el alto total de la pantalla y con "vw" el ancho*/
+  display: flex;/*utilizan el centrado usando flexbox,tanto vertical como horizontal*/
+  align-items: center;
+  justify-content: center;
+}
+
+.content{
+  max-width: 960px;
+  max-height: 500px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  /*box-shadow: diferenciahorizontal diferenciavertical desenfoque amplitu color;*/
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.title-item{
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: #2071B3;
+  padding-bottom: 1em;
+}
+/*
+Rojo: #FF0900
+Amarillo: #F8FF4A
+Marron: #B34844
+Azul suave: #85ACCC
+Azul: #2071B3
+*/
