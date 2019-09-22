@@ -7,7 +7,7 @@ Marlon = Curso()
 
 Marlon.Saludar("Hola mi nombre es ")
 '''
-class Usuario(object):
+class Usuario:
     """docstring for Curso."""
 
     def __init__(self, nombre):
@@ -17,6 +17,19 @@ class Usuario(object):
     def Saludar(self,saludo):
         print( saludo +  self.nombre)
 
-Marlon = Usario("Marlon")
+class Empleado(Usuario):
+    salario = 0
 
-Marlon.Saludar("Hola mi nombre es ")
+    def modificarsalario(self,salario):
+        self.salario =salario
+
+    def ver_salario(self):
+        print(self.salario)
+
+    def Saludar(self):
+        print( "Hola mi nombre es" + self.nombre +  "Mi salario es de "+ string(self.salario))
+
+empleado = Empleado("Marlon")
+empleado.modificarsalario(1000)
+empleado.ver_salario()
+empleado.Saludar()
