@@ -27,11 +27,10 @@ function getRepos(repos_url) {
   return GET(repos_url);
 }
 
-getUserInfo("codigofacilito").then(response => {
-    let responseJSON = JSON.parse(response);
+let getUserPromise = getUser();
 
-    console.log(responseJSON.repos_url);
+let getReposPromise = getUser().then(response => {
+  return getRepos(JSON.parse(response).repos_url);
+}).catch(console.log);
 
-    getRepos(responseJSON.repos_url).then( repos => {console.log(repos)});
-}
-).catch(console.log);
+getReposPromise.then(console.log).catch(console.log);
