@@ -31,6 +31,13 @@ let getUserPromise = getUser();
 
 let getReposPromise = getUser().then(response => {
   return getRepos(JSON.parse(response).repos_url);
-}).catch(console.log);
+});
 
-getReposPromise.then(console.log).catch(console.log);
+Promise.all([getUserPromise,getReposPromise])
+  //evalua todas las promesas, si una no cumple se va para el catch
+  .then(([userInfo, reposInfo]) => {
+    console.log("Info del Usuario: ");
+    console.log(userInfo);
+    console.log("Info de los Repos: ");
+    console.log(reposInfo);
+  }).catch( err => console.log(err));
