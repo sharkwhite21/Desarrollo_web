@@ -22,7 +22,7 @@ class Hash():
     def agregar(self,llave,valor):
         datos[llave]=valor
 
-        
+
 class Queue():
     datos = []
 
@@ -31,3 +31,5 @@ class Queue():
 
     def agregar(self,llave,valor):
         datos[len(datos)-1] = valor
+
+#probando git si sirve 
